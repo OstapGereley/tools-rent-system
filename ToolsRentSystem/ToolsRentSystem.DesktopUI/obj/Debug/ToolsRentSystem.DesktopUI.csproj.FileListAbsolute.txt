@@ -1,0 +1,11 @@
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\bin\Debug\ToolsRentSystem.DesktopUI.exe.config
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\bin\Debug\ToolsRentSystem.DesktopUI.exe
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\bin\Debug\ToolsRentSystem.DesktopUI.pdb
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\bin\Debug\ToolsRentSystem.Repositories.dll
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\bin\Debug\ToolsRentSystem.Repositories.pdb
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\obj\Debug\ToolsRentSystem.DesktopUI.csprojResolveAssemblyReference.cache
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\obj\Debug\ToolsRentSystem.DesktopUI.LoginWindow.resources
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\obj\Debug\ToolsRentSystem.DesktopUI.Properties.Resources.resources
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\obj\Debug\ToolsRentSystem.DesktopUI.csproj.GenerateResource.Cache
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\obj\Debug\ToolsRentSystem.DesktopUI.exe
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\obj\Debug\ToolsRentSystem.DesktopUI.pdb

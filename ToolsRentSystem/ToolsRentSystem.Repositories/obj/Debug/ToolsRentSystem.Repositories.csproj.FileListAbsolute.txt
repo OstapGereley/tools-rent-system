@@ -1,0 +1,7 @@
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Repositories\bin\Debug\ToolsRentSystem.Repositories.dll
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Repositories\bin\Debug\ToolsRentSystem.Repositories.pdb
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Repositories\bin\Debug\ToolsRentSystem.Entities.dll
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Repositories\bin\Debug\ToolsRentSystem.Entities.pdb
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Repositories\obj\Debug\ToolsRentSystem.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Repositories\obj\Debug\ToolsRentSystem.Repositories.dll
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Repositories\obj\Debug\ToolsRentSystem.Repositories.pdb
