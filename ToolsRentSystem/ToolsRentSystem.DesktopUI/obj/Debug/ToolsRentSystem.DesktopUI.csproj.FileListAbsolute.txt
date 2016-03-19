@@ -9,3 +9,6 @@ C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRent
 C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\obj\Debug\ToolsRentSystem.DesktopUI.csproj.GenerateResource.Cache
 C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\obj\Debug\ToolsRentSystem.DesktopUI.exe
 C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\obj\Debug\ToolsRentSystem.DesktopUI.pdb
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\bin\Debug\ToolsRentSystem.Entities.dll
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\bin\Debug\ToolsRentSystem.Entities.pdb
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.DesktopUI\obj\Debug\ToolsRentSystem.DesktopUI.MainWindow.resources

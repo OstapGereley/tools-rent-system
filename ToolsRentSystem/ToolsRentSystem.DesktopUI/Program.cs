@@ -31,8 +31,9 @@ namespace ToolsRentSystem.DesktopUI
 
             if (loginForm.correctLogin)
             {
-                Application.Run(new MainWindow());
+
             }
+            Application.Run(new MainWindow());
         }
     }
 }

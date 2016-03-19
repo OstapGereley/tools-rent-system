@@ -119,7 +119,7 @@
             this.Controls.Add(this.grpLogin);
             this.Name = "LoginWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoginWindow";
+            this.Text = "Authentication ";
             this.grpLogin.ResumeLayout(false);
             this.grpLogin.PerformLayout();
             this.ResumeLayout(false);

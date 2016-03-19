@@ -64,6 +64,9 @@
     <EmbeddedResource Include="LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -87,6 +90,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ToolsRentSystem.Entities\ToolsRentSystem.Entities.csproj">
+      <Project>{AF35D1C1-00F0-41A5-AE40-4AF81D2D062E}</Project>
+      <Name>ToolsRentSystem.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ToolsRentSystem.Repositories\ToolsRentSystem.Repositories.csproj">
       <Project>{b16b9e07-de67-492b-8849-ea13690702e0}</Project>
       <Name>ToolsRentSystem.Repositories</Name>
