@@ -9,6 +9,6 @@ namespace ToolsRentSystem.Repositories
 {
     interface IOperatorRepository
     {
-        bool CheckLoginOperator(string login, string password);
+        bool CheckLoginOperator(string login, string password, out int operatorId );
     }
 }

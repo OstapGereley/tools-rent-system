@@ -19,7 +19,7 @@ namespace ToolsRentSystem.Repositories
             _connectionString = connectionString;
         }
 
-        public bool CheckLoginOperator(string login, string password)
+        public bool CheckLoginOperator(string login, string password, out int operatorId)
         {
             using (var connection = new SqlConnection(_connectionString))
             {
@@ -37,7 +37,15 @@ namespace ToolsRentSystem.Repositories
                         Direction = ParameterDirection.Output
                     });
 
+                    command.Parameters.Add(new SqlParameter("@operatorId", SqlDbType.Int)
+                    {
+                        Direction = ParameterDirection.Output
+                    });
+                    
+
                     command.ExecuteNonQuery();
+
+                    operatorId = Convert.ToInt32(command.Parameters["@operatorId"].Value);
 
                     return Convert.ToBoolean(command.Parameters["@exists"].Value);
 

@@ -17,6 +17,17 @@ namespace ToolsRentSystem.Repositories
         private const string SelectAll = @"SELECT c.Id, c.Name, c.Surname, c.ContactPhone, c.Adress
                                            FROM tblCustomer c";
 
+        private const string InsertCusomer = @"INSERT INTO [dbo].[tblCustomer]
+                                                ([Name]
+                                                ,[Surname]
+                                                ,[ContactPhone]
+                                                ,[Adress])
+                                              VALUES
+                                                (@name,
+                                                 @surname,
+                                                 @contactPhone,
+                                                 @adress)";
+
         public SqlCustomerRepository(string connectionString)
         {
             _connectionString = connectionString;
@@ -59,7 +70,25 @@ namespace ToolsRentSystem.Repositories
 
         public void AddNewCustomer(Customer customer)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                using (var command = new SqlCommand()
+                {
+                    CommandType = CommandType.Text,
+                    Connection = connection,
+                    CommandText = InsertCusomer
+                })
+                {
+                    command.Parameters.Add(new SqlParameter("@name",SqlDbType.NVarChar) {Value = customer.Name});
+                    command.Parameters.Add(new SqlParameter("@surname", SqlDbType.NVarChar) { Value = customer.Surname });
+                    command.Parameters.Add(new SqlParameter("@contactPhone", SqlDbType.NVarChar) { Value = customer.ContactPhone });
+                    command.Parameters.Add(new SqlParameter("@adress", SqlDbType.NVarChar) { Value = customer.Adress });
+
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 

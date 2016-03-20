@@ -1,0 +1,7 @@
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Database\bin\Debug\ToolsRentSystem.Database.dacpac
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Database\obj\Debug\Model.xml
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Database\obj\Debug\refactor.xml
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Database\obj\Debug\postdeploy.sql
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Database\obj\Debug\predeploy.sql
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Database\obj\Debug\ToolsRentSystem.Database.dll
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Database\obj\Debug\ToolsRentSystem.Database.pdb

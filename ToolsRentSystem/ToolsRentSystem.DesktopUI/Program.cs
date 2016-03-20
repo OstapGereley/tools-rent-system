@@ -10,6 +10,8 @@ namespace ToolsRentSystem.DesktopUI
     public static class Globals
     {
         public static string connectionString = ConfigurationManager.ConnectionStrings["RentSysConnectionString"].ConnectionString;
+
+        public static int currentOperatorId;
     }
 
     static class Program
@@ -31,9 +33,9 @@ namespace ToolsRentSystem.DesktopUI
 
             if (loginForm.correctLogin)
             {
-
+                Application.Run(new MainWindow());
             }
-            Application.Run(new MainWindow());
+            
         }
     }
 }

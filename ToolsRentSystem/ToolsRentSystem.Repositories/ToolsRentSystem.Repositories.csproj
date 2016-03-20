@@ -42,10 +42,12 @@
   <ItemGroup>
     <Compile Include="ICustomerRepository.cs" />
     <Compile Include="IOperatorRepository.cs" />
+    <Compile Include="IRentOrderRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlCustomerRepository.cs" />
     <Compile Include="SqlOperatorRepository.cs" />
     <Compile Include="IToolRepository.cs" />
+    <Compile Include="SqlRentOrderRepository.cs" />
     <Compile Include="SqlToolRepository.cs" />
   </ItemGroup>
   <ItemGroup>

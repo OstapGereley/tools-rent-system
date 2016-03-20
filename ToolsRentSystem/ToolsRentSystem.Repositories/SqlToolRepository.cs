@@ -17,11 +17,12 @@ namespace ToolsRentSystem.Repositories
                                                FROM tblTool t";
 
         private const string SelectAvalibleTool =
-            @"SELECT DISTINCT t.Id, t.Model, t.Manufacturer, t.Kind, t.SerialNumber, t.Cost
+            @"SELECT DISTINCT  t.Id, t.Model, t.Manufacturer, t.Kind, t.SerialNumber, t.Cost
                                                     FROM tblTool t
                                                     LEFT OUTER JOIN tblRentOrder r
-                                                    ON t.Id = r.IdTool
-                                                    WHERE r.RentStatus = 2 or r.RentStatus is NULL";
+                                                    ON t.Id = r.IdTool 
+                                                    WHERE r.RentStatus = 2 or r.RentStatus is NULL or (r.DateEnd < GETDATE())";
+
 
 
         public SqlToolRepository(string connectionString)

@@ -32,7 +32,7 @@ namespace ToolsRentSystem.DesktopUI
 
             var operatorRepo = new SqlOperatorRepository(Globals.connectionString);
 
-            correctLogin = operatorRepo.CheckLoginOperator(login, resPassword);
+            correctLogin = operatorRepo.CheckLoginOperator(login, resPassword,out Globals.currentOperatorId);
         }
     }
 }
