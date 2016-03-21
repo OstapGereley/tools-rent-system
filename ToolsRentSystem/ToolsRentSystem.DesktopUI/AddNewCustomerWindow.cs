@@ -21,6 +21,7 @@ namespace ToolsRentSystem.DesktopUI
 
         private void btAdd_Click(object sender, EventArgs e)
         {
+            //checks inputs for length and isempty
             if (tbName.Text.Length <= 50 && !String.IsNullOrWhiteSpace(tbName.Text)
                 && tbSurname.Text.Length <= 50 && !String.IsNullOrWhiteSpace(tbSurname.Text)
                 && tbContactPhone.Text.Length <= 50 && !String.IsNullOrWhiteSpace(tbContactPhone.Text)

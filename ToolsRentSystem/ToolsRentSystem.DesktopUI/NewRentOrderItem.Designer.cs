@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbRentOrder = new System.Windows.Forms.GroupBox();
+            this.lCost = new System.Windows.Forms.Label();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.lDateEnd = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             // 
             this.gbRentOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbRentOrder.Controls.Add(this.lCost);
             this.gbRentOrder.Controls.Add(this.dtpEndDate);
             this.gbRentOrder.Controls.Add(this.dtpStartDate);
             this.gbRentOrder.Controls.Add(this.lDateEnd);
@@ -56,12 +58,22 @@
             this.gbRentOrder.TabIndex = 0;
             this.gbRentOrder.TabStop = false;
             // 
+            // lCost
+            // 
+            this.lCost.AutoSize = true;
+            this.lCost.Location = new System.Drawing.Point(10, 54);
+            this.lCost.Name = "lCost";
+            this.lCost.Size = new System.Drawing.Size(34, 13);
+            this.lCost.TabIndex = 7;
+            this.lCost.Text = "Cost: ";
+            // 
             // dtpEndDate
             // 
             this.dtpEndDate.Location = new System.Drawing.Point(71, 94);
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(200, 20);
             this.dtpEndDate.TabIndex = 6;
+            this.dtpEndDate.ValueChanged += new System.EventHandler(this.dtpEndDate_ValueChanged);
             // 
             // dtpStartDate
             // 
@@ -136,6 +148,8 @@
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btAddNewOrder);
             this.Controls.Add(this.gbRentOrder);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "NewRentOrderItem";
             this.Text = "NewRentOrderItem";
             this.gbRentOrder.ResumeLayout(false);
@@ -155,5 +169,6 @@
         private System.Windows.Forms.Label lToolId;
         private System.Windows.Forms.Button btAddNewOrder;
         private System.Windows.Forms.Button btCancel;
+        private System.Windows.Forms.Label lCost;
     }
 }

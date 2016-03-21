@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ToolsRentSystem.Entities
 {
+    /// <summary>
+    /// Customer entity for tblCustomer
+    /// </summary>
     public class Customer
     {
         public int Id { get; set; }

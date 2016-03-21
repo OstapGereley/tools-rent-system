@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ToolsRentSystem.Entities
 {
+    /// <summary>
+    /// Tool entity for tblTool
+    /// </summary>
     public class Tool
     {
         public int Id { get; set; }

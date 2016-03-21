@@ -158,7 +158,7 @@
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.gbCusomer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "AddNewCustomerWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

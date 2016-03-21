@@ -82,6 +82,7 @@ namespace ToolsRentSystem.DesktopUI
 
         private void dgvRentOrders_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            //suport for nested properties while binding to datagridView
             DataGridView grid = (DataGridView)sender;
             DataGridViewRow row = grid.Rows[e.RowIndex];
             DataGridViewColumn col = grid.Columns[e.ColumnIndex];
@@ -98,7 +99,7 @@ namespace ToolsRentSystem.DesktopUI
                 e.Value = val;
             }
 
-
+            //color highlight
             foreach (DataGridViewRow myRow in dgvRentOrders.Rows)
             {
                 if (Convert.ToInt32(myRow.Cells[6].Value) == 1)
@@ -115,5 +116,25 @@ namespace ToolsRentSystem.DesktopUI
 
             btShowAllRents_Click(sender, e);
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Tools Rent System \n Created by Ostap Gereley", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Open browser?", "Show help", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start("https://github.com/OstapGereley/tools-rent-system/wiki");
+            }
+        }
+
+
     }
 }

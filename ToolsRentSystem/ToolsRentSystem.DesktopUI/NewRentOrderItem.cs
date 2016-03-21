@@ -44,12 +44,29 @@ namespace ToolsRentSystem.DesktopUI
                     IdOperator = Globals.currentOperatorId,
                     IdTool = _toolId,
                     RentStatus = 1,
-                    RentPrice = daysRent * _cost,
+                    RentPrice = daysRent*_cost,
                     DateStart = startDate,
                     DateEnd = endDate
                 });
 
                 this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Please enter correct date", "Input error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dtpEndDate_ValueChanged(object sender, EventArgs e)
+        {
+            var endDate = dtpEndDate.Value.Date;
+            var startDate = dtpStartDate.Value.Date;
+
+            var daysRent = (endDate - startDate).Days;
+
+            if (startDate.CompareTo(endDate) < 0)
+            {
+                lCost.Text = "Cost:" + daysRent*_cost;
             }
             else
             {

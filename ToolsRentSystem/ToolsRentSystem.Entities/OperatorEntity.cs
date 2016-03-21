@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ToolsRentSystem.Entities
 {
+    /// <summary>
+    /// Operator entity for tblOperator
+    /// </summary>
     public class Operator
     {
         public int Id { get; set; }

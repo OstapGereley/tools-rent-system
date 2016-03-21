@@ -2,3 +2,4 @@ C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRent
 C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Entities\bin\Debug\ToolsRentSystem.Entities.pdb
 C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Entities\obj\Debug\ToolsRentSystem.Entities.dll
 C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Entities\obj\Debug\ToolsRentSystem.Entities.pdb
+C:\Users\Остап\Documents\GitHub\tools-rent-system\ToolsRentSystem\ToolsRentSystem.Entities\obj\Debug\ToolsRentSystem.Entities.csprojResolveAssemblyReference.cache

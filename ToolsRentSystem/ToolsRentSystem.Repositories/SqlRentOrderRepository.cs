@@ -9,10 +9,19 @@ using ToolsRentSystem.Entities;
 
 namespace ToolsRentSystem.Repositories
 {
+    /// <summary>
+    /// Provides functionality for tblRentOrder
+    /// </summary>
     public class SqlRentOrderRepository:IRentOrderRepository
     {
+
         private readonly string _connectionString;
 
+        #region Sql requests
+
+        /// <summary>
+        /// Creates new rent record
+        /// </summary>
         private const string CreateRentText = @"INSERT INTO [dbo].[tblRentOrder]
                                                    ([IdTool]
                                                    ,[IdCustomer]
@@ -30,6 +39,9 @@ namespace ToolsRentSystem.Repositories
                                                     @RentStatus, 
                                                     @RentPrice)";
 
+        /// <summary>
+        /// Selects all required information about orders  
+        /// </summary>
         private const string SelectAllOrders = @"SELECT r.Id,t.Model,t.Manufacturer, t.Kind, r.DateStart, r.DateEnd, 
                                                         r.RentStatus, r.RentPrice, c.Name, c.Surname, c.ContactPhone, 
                                                         c.Adress, o.Name,o.Surname
@@ -40,16 +52,27 @@ namespace ToolsRentSystem.Repositories
                                                 on c.Id = r.IdCustomer
                                                 INNER JOIN tblOperator o
                                                 on o.Id = r.IdOperator	";
+
+        /// <summary>
+        /// Closes rent order, by setting status = 2
+        /// </summary>
         private const string CloseRentOrder = @"UPDATE [dbo].[tblRentOrder]
                                                 SET [RentStatus] = 2      
                                                 WHERE Id = @id";
+
+        #endregion
 
         public SqlRentOrderRepository(string connectionString)
         {
             _connectionString = connectionString;
         }
 
+        #region Functions
 
+        /// <summary>
+        /// Creates new rentOrder record
+        /// </summary>
+        /// <param name="rentOrder">new RentOrder entity</param>
         public void CreateRent(RentOrder rentOrder)
         {
             using (var connection = new SqlConnection(_connectionString))
@@ -76,6 +99,10 @@ namespace ToolsRentSystem.Repositories
             }
         }
 
+        /// <summary>
+        /// Closes rent 
+        /// </summary>
+        /// <param name="id">Id of RentOrder record to close</param>
         public void CloseRent(int id)
         {
             using (var connection = new SqlConnection(_connectionString))
@@ -96,6 +123,10 @@ namespace ToolsRentSystem.Repositories
             }
         }
 
+        /// <summary>
+        /// Selects all records from multiple tables
+        /// </summary>
+        /// <returns>List of rentOrders</returns>
         public List<RentOrder> SelectAll()
         {
             using (var connection = new SqlConnection(_connectionString))
@@ -147,6 +178,7 @@ namespace ToolsRentSystem.Repositories
                     }
                 }
             }
-        } 
+        }
+        #endregion
     }
 }

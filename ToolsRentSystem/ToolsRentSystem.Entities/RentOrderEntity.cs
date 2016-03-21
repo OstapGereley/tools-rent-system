@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace ToolsRentSystem.Entities
 {
+    /// <summary>
+    /// RentOrder entity for tblRentOrder and for showing detailed information about orders
+    /// </summary>
     public class RentOrder
     {
         public int Id { get; set; }

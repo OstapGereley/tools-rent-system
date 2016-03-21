@@ -13,23 +13,47 @@ namespace ToolsRentSystem.Repositories
     {
         private readonly string _connectionString;
 
+        #region Sql requests
+        
+        /// <summary>
+        /// Selects all from tblTool
+        /// </summary>
         private const string SelectAllTool = @"SELECT t.Id, t.Model, t.Manufacturer, t.Kind, t.SerialNumber, t.Cost
                                                FROM tblTool t";
-
+        /// <summary>
+        /// Selects only avalible tools for renting
+        /// </summary>
         private const string SelectAvalibleTool =
-            @"SELECT DISTINCT  t.Id, t.Model, t.Manufacturer, t.Kind, t.SerialNumber, t.Cost
+                                             @"WITH CTE AS
+                                                    (SELECT t.Id, 
+                                                            t.Model, 
+                                                            t.Manufacturer, 
+                                                            t.Kind,
+			                                                t.SerialNumber,
+			                                                t.Cost, 
+			                                                r.RentStatus,
+                                                            RowNum = ROW_NUMBER() OVER(PARTITION BY t.Id ORDER BY r.Id DESC) 
                                                     FROM tblTool t
-                                                    LEFT OUTER JOIN tblRentOrder r
-                                                    ON t.Id = r.IdTool 
-                                                    WHERE r.RentStatus = 2 or r.RentStatus is NULL or (r.DateEnd < GETDATE())";
+		                                            LEFT OUTER JOIN tblRentOrder r
+		                                            ON t.Id = r.IdTool)
+                                            SELECT  Id,Model,Manufacturer,Kind,SerialNumber,Cost
+                                            FROM    CTE
+                                            WHERE   RowNum = 1 AND (RentStatus = 2 or RentStatus is NULL);";
 
-
+        #endregion
 
         public SqlToolRepository(string connectionString)
         {
             _connectionString = connectionString;
         }
 
+        #region Functions
+
+        /// <summary>
+        /// Selects records according to selection param
+        /// </summary>
+        /// <param name="selection">Avalible selections "All", "Avalible"</param>
+        /// <returns>list of tool entity</returns>
         public List<Tool> SelectTools(string selection)
         {
             using (var connection = new SqlConnection(_connectionString))
@@ -71,5 +95,6 @@ namespace ToolsRentSystem.Repositories
                 }
             }
         }
+        #endregion
     }
 }

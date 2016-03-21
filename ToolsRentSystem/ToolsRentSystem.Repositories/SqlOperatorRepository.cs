@@ -10,6 +10,9 @@ using ToolsRentSystem.Entities;
 
 namespace ToolsRentSystem.Repositories
 {
+    /// <summary>
+    /// Provides functionality for tblOperator
+    /// </summary>
     public class SqlOperatorRepository : IOperatorRepository
     {
         private readonly string _connectionString;
@@ -19,6 +22,15 @@ namespace ToolsRentSystem.Repositories
             _connectionString = connectionString;
         }
 
+        #region Functions
+
+        /// <summary>
+        /// Verifies if login and password are correct
+        /// </summary>
+        /// <param name="login">Operator login</param>
+        /// <param name="password">Operator password hash using md5</param>
+        /// <param name="operatorId">sets operator id if operator exists</param>
+        /// <returns>if operator exists</returns>
         public bool CheckLoginOperator(string login, string password, out int operatorId)
         {
             using (var connection = new SqlConnection(_connectionString))
@@ -52,6 +64,8 @@ namespace ToolsRentSystem.Repositories
                 }
             }
         }
+
+        #endregion
 
     }
 }

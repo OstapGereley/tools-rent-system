@@ -10,13 +10,23 @@ using ToolsRentSystem.Entities;
 
 namespace ToolsRentSystem.Repositories
 {
+    /// <summary>
+    /// Provides functionality for tblCustomer
+    /// </summary>
     public class SqlCustomerRepository: ICustomerRepository
     {
         private readonly string _connectionString;
 
+        #region Sql requests
+
+        /// <summary>
+        /// Selects every record from tblCustomer
+        /// </summary>
         private const string SelectAll = @"SELECT c.Id, c.Name, c.Surname, c.ContactPhone, c.Adress
                                            FROM tblCustomer c";
-
+        /// <summary>
+        /// Inserts record into tblCustomer
+        /// </summary>
         private const string InsertCusomer = @"INSERT INTO [dbo].[tblCustomer]
                                                 ([Name]
                                                 ,[Surname]
@@ -27,12 +37,19 @@ namespace ToolsRentSystem.Repositories
                                                  @surname,
                                                  @contactPhone,
                                                  @adress)";
+        #endregion
 
         public SqlCustomerRepository(string connectionString)
         {
             _connectionString = connectionString;
         }
 
+        #region Functions
+
+        /// <summary>
+        /// Selects every record from tblCustomer
+        /// </summary>
+        /// <returns>list of Customer</returns>
         public List<Customer> SelectAllCustomers()
         {
             using (var connection = new SqlConnection(_connectionString))
@@ -68,6 +85,10 @@ namespace ToolsRentSystem.Repositories
             }
         }
 
+        /// <summary>
+        /// Inserts new Customer into tblCustomer
+        /// </summary>
+        /// <param name="customer">new Customer entity</param>
         public void AddNewCustomer(Customer customer)
         {
             using (var connection = new SqlConnection(_connectionString))
@@ -90,6 +111,7 @@ namespace ToolsRentSystem.Repositories
                 }
             }
         }
+        #endregion
     }
 
 
