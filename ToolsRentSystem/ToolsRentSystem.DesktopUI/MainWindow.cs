@@ -99,14 +99,7 @@ namespace ToolsRentSystem.DesktopUI
                 e.Value = val;
             }
 
-            //color highlight
-            foreach (DataGridViewRow myRow in dgvRentOrders.Rows)
-            {
-                if (Convert.ToInt32(myRow.Cells[6].Value) == 1)
-                {
-                    myRow.DefaultCellStyle.BackColor = Color.Green;
-                }
-            }
+           
         }
 
         private void btCloseRentOrder_Click(object sender, EventArgs e)
@@ -135,6 +128,21 @@ namespace ToolsRentSystem.DesktopUI
             }
         }
 
+        private void dgvRentOrders_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            //color highlight
+            foreach (DataGridViewRow myRow in dgvRentOrders.Rows)
+            {
+                if (Convert.ToInt32(myRow.Cells[6].Value) == 1)
+                {
+                    myRow.DefaultCellStyle.BackColor = Color.Green;
+                }
 
+                if (Convert.ToDateTime(myRow.Cells[5].Value).CompareTo(DateTime.Today) < 0 && Convert.ToInt32(myRow.Cells[6].Value) == 1)
+                {
+                    myRow.DefaultCellStyle.BackColor = Color.Red;
+                }
+            }
+        }
     }
 }

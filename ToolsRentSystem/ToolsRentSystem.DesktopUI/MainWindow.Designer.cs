@@ -439,6 +439,7 @@
             this.dgvRentOrders.Size = new System.Drawing.Size(906, 299);
             this.dgvRentOrders.TabIndex = 0;
             this.dgvRentOrders.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRentOrders_CellFormatting);
+            this.dgvRentOrders.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvRentOrders_DataBindingComplete);
             // 
             // RentId
             // 
