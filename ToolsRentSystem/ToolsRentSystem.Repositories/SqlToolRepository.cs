@@ -23,7 +23,7 @@ namespace ToolsRentSystem.Repositories
         /// <summary>
         /// Selects only avalible tools for renting
         /// </summary>
-        // Review HP: vll spaces are missed in SELECT section.
+        // Review HP: All spaces are missed in SELECT section.
         private const string SelectAvalibleTool =
                                              @"WITH CTE AS
                                                     (SELECT t.Id, 
