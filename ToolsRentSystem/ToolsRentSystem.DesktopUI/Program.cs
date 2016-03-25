@@ -83,6 +83,7 @@ namespace ToolsRentSystem.DesktopUI
             try
             {
                 Exception ex = (Exception)e.ExceptionObject;
+                // Review HP: String concatenation.
                 string errorMsg = "An application error occurred. Please contact the adminstrator " +
                     "with the following information:\n\n";
 
@@ -93,12 +94,14 @@ namespace ToolsRentSystem.DesktopUI
 
                 EventLog myLog = new EventLog();
                 myLog.Source = "ThreadException";
+                // Review HP: String concatenation.
                 myLog.WriteEntry(errorMsg + ex.Message + "\n\nStack Trace:\n" + ex.StackTrace);
             }
             catch (Exception exc)
             {
                 try
                 {
+                    // Review HP: And again string concatenation.
                     MessageBox.Show("Fatal Non-UI Error",
                         "Fatal Non-UI Error. Could not write the error to the event log. Reason: "
                         + exc.Message, MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -112,6 +115,7 @@ namespace ToolsRentSystem.DesktopUI
 
         private static DialogResult ShowThreadExceptionDialog(string title, Exception e)
         {
+            // Review HP: And again string concatenation ...
             string errorMsg = "An application error occurred. Please contact the adminstrator " +
                 "with the following information:\n\n";
             errorMsg = errorMsg + e.Message + "\n\nStack Trace:\n" + e.StackTrace;
