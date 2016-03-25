@@ -23,6 +23,7 @@ namespace ToolsRentSystem.Repositories
         /// <summary>
         /// Selects only avalible tools for renting
         /// </summary>
+        // Review HP: All spaces are missed in SELECT section.
         private const string SelectAvalibleTool =
                                              @"WITH CTE AS
                                                     (SELECT t.Id, 
@@ -66,7 +67,9 @@ namespace ToolsRentSystem.Repositories
                     Connection = connection
                 })
                 {
-
+		
+		    // Review HP: New line is needless at the beginning of block.
+		    // Review HP: Statements after if clouse must be in block.
                     if (String.CompareOrdinal("All", selection) == 0)
                         command.CommandText = SelectAllTool;
 
