@@ -21,7 +21,9 @@ namespace ToolsRentSystem.DesktopUI
 
         private void btAdd_Click(object sender, EventArgs e)
         {
+            // Review HP: It must be a white space after '//'.
             //checks inputs for length and isempty
+            // Review HP: Too complicated if clause. It must be separated.
             if (tbName.Text.Length <= 50 && !String.IsNullOrWhiteSpace(tbName.Text)
                 && tbSurname.Text.Length <= 50 && !String.IsNullOrWhiteSpace(tbSurname.Text)
                 && tbContactPhone.Text.Length <= 50 && !String.IsNullOrWhiteSpace(tbContactPhone.Text)
