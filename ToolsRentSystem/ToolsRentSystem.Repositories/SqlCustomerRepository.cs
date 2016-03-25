@@ -55,7 +55,8 @@ namespace ToolsRentSystem.Repositories
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-
+                // Review HP: It looks better if initialisation of command properties is inside the block of using,
+                // not in constructor.
                 using (var command = new SqlCommand()
                 {
                     CommandType = CommandType.Text,
@@ -69,6 +70,7 @@ namespace ToolsRentSystem.Repositories
 
                         while (reader.Read())
                         {
+                            // Rewiew HP: Maybe it is better to initialize customer outside the method Add.
                             myList.Add(new Customer()
                             {
                                 Id = Convert.ToInt32(reader["Id"]),
@@ -94,7 +96,8 @@ namespace ToolsRentSystem.Repositories
             using (var connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-
+                
+                // Rewiew HP: The same thing with initialization here. And everywhere.
                 using (var command = new SqlCommand()
                 {
                     CommandType = CommandType.Text,
