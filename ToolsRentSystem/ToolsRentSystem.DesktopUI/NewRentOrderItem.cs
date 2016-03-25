@@ -66,6 +66,10 @@ namespace ToolsRentSystem.DesktopUI
 
             if (startDate.CompareTo(endDate) < 0)
             {
+                // Review HP: string concatination is everywere(
+                // why you dont use new feature of c# 6.0 string interpolation.
+
+                // Review HP: missed spaces near operator *.
                 lCost.Text = "Cost:" + daysRent*_cost;
             }
             else
