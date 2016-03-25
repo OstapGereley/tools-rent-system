@@ -70,7 +70,7 @@ namespace ToolsRentSystem.Repositories
 
                         while (reader.Read())
                         {
-                            // Rewiew HP: Maybe it is better to initialize customer outside the method Add.
+                            // Review HP: Maybe it is better to initialize customer outside the method Add.
                             myList.Add(new Customer()
                             {
                                 Id = Convert.ToInt32(reader["Id"]),
@@ -97,7 +97,7 @@ namespace ToolsRentSystem.Repositories
             {
                 connection.Open();
                 
-                // Rewiew HP: The same thing with initialization here. And everywhere.
+                // Review HP: The same thing with initialization here. And everywhere.
                 using (var command = new SqlCommand()
                 {
                     CommandType = CommandType.Text,
