@@ -146,6 +146,8 @@ namespace ToolsRentSystem.Repositories
 
                         while (reader.Read())
                         {
+                            // Review HP: this initialisation inside the Add method 
+                            // should be done separately for all components.
                             myList.Add(new RentOrder()
                             {
                                 RTool = new Tool()
