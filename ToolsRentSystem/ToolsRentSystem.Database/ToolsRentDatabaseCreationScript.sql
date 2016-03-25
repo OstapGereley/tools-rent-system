@@ -29,6 +29,7 @@ Id INT IDENTITY NOT NULL,
 [Password] VARCHAR(40) NOT NULL,
 Name VARCHAR(50) NOT NULL,
 Surname VARCHAR(50) NOT NULL,
+-- Review HP: Missing comma after column definition 
 [Disabled] BIT NOT NULL
 CONSTRAINT PK_tblOperator_Id PRIMARY KEY (Id),
 CONSTRAINT UQ_tblOperator_Login UNIQUE ([Login])
@@ -43,6 +44,7 @@ IdOperator INT NOT NULL,
 DateStart DATETIME NOT NULL,
 DateEnd DATETIME NOT NULL,
 RentStatus INT NOT NULL,
+-- Review HP: Missing comma after column definition 
 RentPrice NUMERIC (18,4)
 CONSTRAINT PK_tblRentOrder_Id PRIMARY KEY (Id),
 CONSTRAINT FK_tblRentOrder_tblTool_Id FOREIGN KEY (IdTool) REFERENCES tblTool(Id),
