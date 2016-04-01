@@ -18,6 +18,8 @@ namespace ToolsRentSystem.DesktopUI
         public MainWindow()
         {
             InitializeComponent();
+            // Review HP: maybe it would be better if tables were filled with context
+            // when form is downloaded
         }
 
         private void btShowTools_Click(object sender, EventArgs e)
