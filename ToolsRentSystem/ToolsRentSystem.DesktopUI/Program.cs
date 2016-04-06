@@ -9,6 +9,8 @@ using System.Windows.Forms;
 
 namespace ToolsRentSystem.DesktopUI
 {
+    // IP: controversial decision - store "connectionString" within the separate static class vs. create a common base class for all the repositories: for example, "BaseRepository"
+    // with the relevant property presence ...
     public static class Globals
     {
         public static string connectionString = ConfigurationManager.ConnectionStrings["RentSysConnectionString"].ConnectionString;
