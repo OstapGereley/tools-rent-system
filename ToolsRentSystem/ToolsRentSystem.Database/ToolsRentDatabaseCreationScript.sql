@@ -1,3 +1,5 @@
+CREATE DATABASE ToolsRentDatabase
+GO
 
 USE ToolsRentDatabase
 

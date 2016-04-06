@@ -1,4 +1,7 @@
-﻿CREATE PROCEDURE spCheckLoginOperator 
+﻿USE ToolsRentDatabase
+GO
+
+CREATE PROCEDURE spCheckLoginOperator 
 	@login VARCHAR(30), 
 	@password VARCHAR(40),
 	@exists BIT OUTPUT,
